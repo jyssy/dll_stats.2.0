@@ -16,7 +16,7 @@ with open('cataloging_stats.csv', 'r') as call_stats:
             subject_area_counts[subject_area] = 0
         subject_area_counts[subject_area] += 1
 
-    with open('CallNo_Count.csv', 'w') as call_stats_report:
+    with open('CallNos_out.csv', 'w') as call_stats_report:
         report_writer = csv.writer(call_stats_report)
 
         for subject_area, count in subject_area_counts.items():
