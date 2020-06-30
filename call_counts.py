@@ -6,10 +6,8 @@ subject_area_counts = {}
 
 with open('cataloging_stats.csv', 'r') as call_stats:
     report_reader = csv.reader(call_stats)
-
     # skip headers
     next(report_reader)
-
     for row in report_reader:
         call_num = row[4]
 
@@ -26,5 +24,3 @@ with open('cataloging_stats.csv', 'r') as call_stats:
 
         # RESORT the resulting spreadsheet (manually) so the call numbers are in alpha order.
         # Delete the empty lines (not quite sure how to get rid of that part yet...)
- 
-

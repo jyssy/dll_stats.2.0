@@ -1,19 +1,17 @@
 import csv, sys
 import operator
 
-file_name = 'law969.csv' # make sure to pick a proper name for the 969 outout to be names for the script
+file_name = '969_in.csv' # make sure to pick a proper name for the 969 outout to be names for the script
 f = open(file_name, encoding='utf-8')
 csv_file = csv.reader(f)
 next(csv_file)
 second_column = [] # empty list to store eighth column values
 for line in csv_file:
     second_column.append(line[1])
-
 # removes empty lines, puts in required header file, strips out old header file
 dataList=[s for s in second_column if s.strip()]
 dataList.insert(0, 'iniCOD')
 #dataList.remove('Item note')
-
 # make the list object into a set object
 dataSet=set(dataList)
 
@@ -30,11 +28,9 @@ codes = dict(PMO=' Print Monograph Original ', PML=' Print Monograph LC copy ', 
                  RMB=' Revised Monograph Bibliographic ', RSB=' Revised Serial Bibliographic ', RIB=' Revised Integrating Bibliographic ', RWB=' Revised Web Bibliographic ',
                  DVO=' DVD Original ', DVC=' DVD OCLC copy ', DVL=' DVD LC Copy ',
                  ADD=' Added volume (added copy) ')
-
 # Loop through the set.
 # Count number of occurrences of each set element in the list
 # Includes PCC BibCO (lambertson). NACO is, by necessity, collected separately.
-
 with open('interim2.csv', 'w', newline='') as unsorted:
     # writer = csv.writer(stats_output, delimiter=':')
     writer = csv.writer(unsorted, delimiter=':')
@@ -44,10 +40,8 @@ with open('interim2.csv', 'w', newline='') as unsorted:
             name_stat = team[stat[:3]]
             code_stat = codes[stat[-3:]]
             statCount =dataList.count(stat)
-
 #        '''Using 'write' in the csv module to output the necessary
 #            info. '''
-
             if stat != 'iniCOD':
 
                 writer.writerow([name_stat, code_stat, str(statCount)])
@@ -55,17 +49,15 @@ with open('interim2.csv', 'w', newline='') as unsorted:
             else:
 
                 print('all good for 969 info')
-
             # print(name + ': ' + code + ': ' + str(statCount))
-
 # sort the data and save it to a new csv
 data = csv.reader(open('interim2.csv'), delimiter=',')
 sortedlist = sorted(data, key=operator.itemgetter(0))    # 0 specifies according to first column we want to sort
       # now write the sort result into new CSV file
 
-with open("969_data.csv", 'w', newline='') as final:
+with open("969_out.csv", 'w', newline='') as final:
     fileWriter = csv.writer(final, delimiter=',')
     for row in sortedlist:
-        fileWriter.writerow(row)      
+        fileWriter.writerow(row)
 
 print('complete! and yay for 969 step!')

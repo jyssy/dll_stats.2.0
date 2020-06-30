@@ -9,12 +9,10 @@ next(csv_file)
 eighth_column = [] # empty list to store eighth column values
 for line in csv_file:
     eighth_column.append(line[7])
-
 # removes empty lines, puts in required header file, strips out old header file
 dataList=[s for s in eighth_column if s.strip()]
 dataList.insert(0, 'iniCOD')
 #dataList.remove('Item note')
-
 # make the list object into a set object
 dataSet=set(dataList)
 
@@ -41,24 +39,16 @@ with open('interim.csv', 'w', newline='') as unsorted:
     writer = csv.writer(unsorted, delimiter=':')
 
     for stat in dataSet:
-
             name_stat = team[stat[:3]]
             code_stat = codes[stat[-3:]]
             statCount =dataList.count(stat)
-
 #        '''Using 'write' in the csv module to output the necessary
 #            info. '''
-
             if stat != 'iniCOD':
-
                 writer.writerow([name_stat, code_stat, str(statCount)])
-
             else:
-
                 print('all good')
-
             # print(name + ': ' + code + ': ' + str(statCount))
-
 # sort the data and save it to a new csv
 data = csv.reader(open('interim.csv'), delimiter=',')
 sortedlist = sorted(data, key=operator.itemgetter(0))    # 0 specifies according to first column we want to sort
@@ -67,9 +57,8 @@ sortedlist = sorted(data, key=operator.itemgetter(0))    # 0 specifies according
 with open("stats_out.csv", 'w', newline='') as final:
     fileWriter = csv.writer(final, delimiter=',')
     for row in sortedlist:
-        fileWriter.writerow(row)        
+        fileWriter.writerow(row)
 
 print('complete! and yay!')
 
 # ADD a manual TOTALS count at the bottom of this file
-
