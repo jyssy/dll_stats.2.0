@@ -14,4 +14,4 @@ exec(open('Stats_wb.py').read())
 
 print('Workbook for the month created')
 
-exec(open('osRemove.py').read()) # this might work
+# exec(open('osRemove.py').read()) # this might work
