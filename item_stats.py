@@ -51,7 +51,7 @@ with open('interim.csv', 'w', newline='') as unsorted:
             # print(name + ': ' + code + ': ' + str(statCount))
 # sort the data and save it to a new csv
 data = csv.reader(open('interim.csv'), delimiter=',')
-sortedlist = sorted(data, key=operator.itemgetter(0))    # 0 specifies according to first column we want to sort
+sortedlist = sorted(data, key=operator.itemgetter(0))    # 0 specifies the first column we want to sort
       # now write the sort result into new CSV file
 
 with open('stats_out.csv', 'w', newline='') as final:
