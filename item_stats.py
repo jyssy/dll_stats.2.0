@@ -50,15 +50,26 @@ with open('interim.csv', 'w', newline='') as unsorted:
                 print('all good')
             # print(name + ': ' + code + ': ' + str(statCount))
 # sort the data and save it to a new csv
-data = csv.reader(open('interim.csv'), delimiter=',')
-sortedlist = sorted(data, key=operator.itemgetter(0))    # 0 specifies the first column we want to sort
-      # now write the sort result into new CSV file
+# data = csv.reader(open('interim.csv'), delimiter=',')
+# sortedlist = sorted(data, key=operator.itemgetter(0))    # 0 specifies according to first column we want to sort
+#       # now write the sort result into new CSV file
+
+# with open('stats_out.csv', 'w', newline='') as final:
+#     fileWriter = csv.writer(final, delimiter=',')
+#     for row in sortedlist:
+#         fileWriter.writerow(row)
+
+interim_file = open('interim.csv', 'r')
+data = csv.reader(interim_file, delimiter = ',')
+sortedlist = sorted(data, key=operator.itemgetter(0))    # 0 specifies according to first column we want to sort
 
 with open('stats_out.csv', 'w', newline='') as final:
     fileWriter = csv.writer(final, delimiter=',')
     for row in sortedlist:
         fileWriter.writerow(row)
 
+interim_file.close()
 print('complete! and yay!')
+
 
 # ADD a manual TOTALS count at the bottom of this file

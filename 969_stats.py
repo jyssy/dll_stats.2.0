@@ -59,13 +59,14 @@ with open('interim2.csv', 'w', newline='') as unsorted:
             # print(name + ': ' + code + ': ' + str(statCount))
 
 # sort the data and save it to a new csv
-data = csv.reader(open('interim2.csv'), delimiter=',')
+interim_file2 = open('interim2.csv', 'r')
+data = csv.reader(interim_file2, delimiter = ',')
 sortedlist = sorted(data, key=operator.itemgetter(0))    # 0 specifies according to first column we want to sort
-      # now write the sort result into new CSV file
 
 with open('969_out.csv', 'w', newline='') as final:
     fileWriter = csv.writer(final, delimiter=',')
     for row in sortedlist:
         fileWriter.writerow(row)
 
+interim_file2.close()
 print('complete! and yay for 969 step!')
