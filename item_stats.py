@@ -11,8 +11,8 @@ for line in csv_file:
     eighth_column.append(line[7])
 # removes empty lines, puts in required header file, strips out old header file
 dataList=[s for s in eighth_column if s.strip()]
+# Replace 'Item note' with iniCOD
 dataList.insert(0, 'iniCOD')
-#dataList.remove('Item note')
 # make the list object into a set object
 dataSet=set(dataList)
 

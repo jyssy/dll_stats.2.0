@@ -1,7 +1,8 @@
 import csv, sys
 import operator
 
-file_name = '969_in.csv' # make sure to pick a proper name for the 969 outout to be names for the script
+# change the name of the output from DBeaver with the name: '969_in.csv'
+file_name = '969_in.csv' 
 f = open(file_name, encoding='utf-8')
 csv_file = csv.reader(f)
 next(csv_file)
