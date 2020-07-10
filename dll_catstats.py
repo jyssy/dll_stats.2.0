@@ -2,7 +2,6 @@
 # Running the statistics script: 'dll_metastats.py, grabs and organizes 969 data, creates the necxessary workbook to pull these codes and Call#s together'
 # # Statistics for Cataloging/Metadata Department (run monthly)
 # Uses data from an OLE Report (item records and bib data)
-# Figure out how to remove interm.csv documents and all other documents produced through the process
 # jesse a lambertson lambertson@uchicago.edu
 
 import sys, os
