@@ -1,8 +1,8 @@
 # This is the master stats script that opens and closes the others in their proper order
 # Running the statistics script: 'dll_metastats.py, grabs and organizes 969 data, creates the necxessary workbook to pull these codes and Call#s together'
-# # Statistics for Cataloging/Metadata Department (run monthly)
+# Statistics for Cataloging/Metadata Department (run monthly)
 # Uses data from an OLE Report (item records and bib data)
-# jesse a lambertson lambertson@uchicago.edu
+# Jesse A Lambertson lambertson@uchicago.edu
 
 import sys, os
 
