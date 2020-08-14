@@ -1,4 +1,4 @@
-# Call_number counts taken from the Monthly DBeaver report foir Items
+# Call_number counts taken from the Monthly DBeaver report for Items
 
 import sys, os, csv
 
