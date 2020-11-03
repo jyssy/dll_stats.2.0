@@ -2,7 +2,7 @@ import csv, sys
 import operator
 
 # change the name of the output from DBeaver with the name: '969_in.csv'
-file_name = '969_in.csv' 
+file_name = '969_in.csv'
 f = open(file_name, encoding='utf-8')
 csv_file = csv.reader(f)
 next(csv_file)
@@ -19,18 +19,18 @@ dataList.insert(0, 'iniCOD')
 dataSet=set(dataList)
 
 team = dict(jal='Jesse Lambertson ', psm='Pat Sayre-McCoy ', mcd='Melanie Dial ', den='Daryl Nelson ', jrs='Julie Stauffer ', naa='Nissy ', dmd='Dora Davis ', ini='Initial_header ')
-codes = dict(PMO=' Print Monograph Original ', PML=' Print Monograph LC copy ', PMC=' Print Monograph OCLC copy ', COD=' Code_header ',
+codes = dict(PMO=' Print Monograph Original ', PML=' Print Monograph LC Copy ', PMC=' Print Monograph OCLC Copy ', COD=' Code_header ',
                  PMR=' Print Monograph OCLC Revised ', PMB=' Print Monograph Rare Book cataloging ', PPC=' Print PCC Original ',
-                 PCU=' Print PCC Upgrade ', PSO=' Print Serial Original ',
-                 PSL=' Print Serial LC copy ', PSC=' Print Serial OCLC copy ', PSR=' Print Serial OCLC Revised ',
+                 PPU=' Print PCC Upgrade ', PSO=' Print Serial Original ',
+                 PSL=' Print Serial LC Copy ', PSC=' Print Serial OCLC Copy ', PSR=' Print Serial OCLC Revised ', PCO=' Print CONSER Original ', PCU=' Print CONSER Upgrade',
                  MWL=' Monograph WLAW ',MWR='Monograph WLAW Removed', WMO=' Web monograph Original ', WML=' Web Monograph LC Copy ',
-                 WMC=' Web monograph OCLC copy ', WMR=' Revised web monograph ', WSO=' Web Serial Original ',
-                 WSL=' Web Serial LC copy ', WSC=' Web Serial OCLC ', WSR=' Web Serial Revised ',
+                 WMC=' Web monograph OCLC Copy ', WMR=' Revised web monograph ', WSO=' Web Serial Original ',
+                 WSL=' Web Serial LC Copy ', WSC=' Web Serial OCLC ', WSR=' Web Serial Revised ',
                  IOR=' Integrating Original Resource ', ICR=' Integrating OCLC Resource ', ILR=' Integrating LC Resource ', NNA=' New NACO Contribution ',
                  RNA=' Print Serial Enrich ', NSA=' New Series contribution ', RSA=' Revised Series contribution ',
                  RMB=' Revised Monograph Bibliographic ', RSB=' Revised Serial Bibliographic ', RIB=' Revised Integrating Bibliographic ', RWB=' Revised Web Bibliographic ',
-                 DVO=' DVD Original ', DVC=' DVD OCLC copy ', DVL=' DVD LC Copy ',
-                 ADD=' Added volume (added copy) ')
+                 DVO=' DVD Original ', DVC=' DVD OCLC Copy ', DVL=' DVD LC Copy ',
+                 ADM=' Added-Volume Monograph ', ADS=' Added-Volume Serial')
 
 # Loop through the set.
 # Count number of occurrences of each set element in the list
@@ -71,3 +71,4 @@ with open('969_out.csv', 'w', newline='') as final:
 
 interim_file2.close()
 print('complete! and yay for 969 step!')
+
