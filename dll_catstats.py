@@ -12,5 +12,4 @@ exec(open('969_stats.py').read())
 exec(open('Stats_wb.py').read())
 
 print('Workbook for the month created')
-
 exec(open('osRemove.py').read())
