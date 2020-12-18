@@ -21,7 +21,7 @@ for r_idx, row in enumerate(eBibedits, 1):
     for c_idx, value in enumerate(row, 1):
          ws2.cell(row=r_idx, column=c_idx, value=value)
 callNos = pd.read_csv('CallNos_out.csv', header=None) # to list the accumulation of physical materials in call# ranges
-# callNos.reset_index(level=None, drop=False, inplace=False, col_level=0, col_fill='') # testing where the reset_index() should go
+# callNos.reset_index(level=None, drop=False, inplace=False, col_level=0, col_fill='') # testing where the reset_index() should go awaiting stackoverflow comment
 callNos.sort_values(by=[0], axis=0, ascending=True, inplace=True)
 callNos = dataframe_to_rows(callNos)
 for r_idx, row in enumerate(callNos, 1):
