@@ -1,5 +1,5 @@
 # Item statistics using initials and codes
-import sys, os, csv, operator
+import csv, operator
 
 # Change the name of the actual csv to: 'Cataloging_stats.csv'
 file_name = "cataloging_stats.csv"

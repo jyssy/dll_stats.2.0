@@ -1,5 +1,5 @@
-'''Specifically looking for a way to clean up some temp files produced
-in cataloging statistics'''
+"""Specifically looking for a way to clean up some temp files produced
+in cataloging statistics"""
 
 import os
 

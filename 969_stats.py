@@ -1,4 +1,4 @@
-import csv, sys
+import csv
 import operator
 
 # change the name of the output from DBeaver with the name: '969_in.csv'
@@ -71,4 +71,3 @@ with open('969_out.csv', 'w', newline='') as final:
 
 interim_file2.close()
 print('complete! and yay for 969 step!')
-

@@ -1,27 +1,25 @@
-import csv, os, operator
 import pandas as pd
-from openpyxl.workbook import Workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
-from openpyxl import load_workbook
+from openpyxl.workbook import Workbook
 
 wb = Workbook()
 # ws = wb.active
 ws1 = wb.create_sheet('Item Stats', 0)
 ws2 = wb.create_sheet('969 Stats', 1)
 ws3 = wb.create_sheet('CallNos', 2)
+# ws4 = wb.create_sheet('Generalized Stats', 3)
 
-items = pd.read_csv('stats_out.csv', header=None) # the actual item-count statistics for each cataloger
+items = pd.read_csv('stats_out.csv', header=None)  # the actual item-count statistics for each cataloger
 items = dataframe_to_rows(items)
 for r_idx, row in enumerate(items, 1):
     for c_idx, value in enumerate(row, 1):
          ws1.cell(row=r_idx, column=c_idx, value=value)
-eBibedits = pd.read_csv('969_out.csv', header=None) # to count edits made to bibs for electronic, etc, not counted by item edits
+eBibedits = pd.read_csv('969_out.csv', header=None)  # to count edits made to bibs for electronic, etc, not counted by item edits
 eBibedits = dataframe_to_rows(eBibedits)
 for r_idx, row in enumerate(eBibedits, 1):
     for c_idx, value in enumerate(row, 1):
          ws2.cell(row=r_idx, column=c_idx, value=value)
-callNos = pd.read_csv('CallNos_out.csv', header=None) # to list the accumulation of physical materials in call# ranges
-# callNos.reset_index(level=None, drop=False, inplace=True, col_level=0, col_fill='') # testing where the reset_index() should go
+callNos = pd.read_csv('CallNos_out.csv', header=None)  # to list the accumulation of physical materials in call# ranges
 callNos.sort_values(by=[0], axis=0, ascending=True, inplace=True)
 callNos = callNos.reset_index(drop=True)
 callNos = dataframe_to_rows(callNos)
