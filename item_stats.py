@@ -24,12 +24,12 @@ codes = dict(PMO=' Print Monograph Original ', PML=' Print Monograph LC Copy ', 
                  PSL=' Print Serial LC Copy ', PSC=' Print Serial OCLC Copy ', PSR=' Print Serial OCLC Copy Revised ', PCO=' Print CONSER Original ', PCU=' Print CONSER Upgrade',
                  MWL=' Monograph WLAW ',MWR='Monograph WLAW Removed', WMO=' Web Monograph Original ', WML=' Web Monograph LC Copy ',
                  WMC=' Web Monograph OCLC Copy ', WMR=' Revised Web Monograph ', WSO=' Web Serial Original ',
-                 WSL=' Web Serial LC Copy ', WSC=' Web Serial OCLC Copy', WSR=' Web Serial Revised ',
+                 WSL=' Web Serial LC Copy ', WSC=' Web Serial OCLC Copy ', WSR=' Web Serial Revised ',
                  IOR=' Integrating Original Resource ', ICR=' Integrating OCLC Copy Resource ', ILR=' Integrating LC Resource ', NNA=' New NACO Contribution ',
                  RNA=' Print Serial Enrich ', NSA=' New Series contribution ', RSA=' Revised Series contribution ',
                  RMB=' Revised Monograph Bibliographic ', RSB=' Revised Serial Bibliographic ', RIB=' Revised Integrating Bibliographic ', RWB=' Revised Web Bibliographic ',
                  DVO=' DVD Original ', DVC=' DVD OCLC Copy ', DVL=' DVD LC Copy ',
-                 ADM=' Added-Volume Monograph ', ADS=' Added-Volume Serial')
+                 ADM=' Added-Volume Monograph ', ADS=' Added-Volume Serial ')
 
 # Loop through the set.
 # Count number of occurrences of each set element in the list
