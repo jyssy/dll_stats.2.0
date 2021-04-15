@@ -1,4 +1,4 @@
-"""Specifically looking for a way to clean up some temp files produced
+"""Clearning up temp (interim) files produced
 in cataloging statistics"""
 
 import os
@@ -8,3 +8,5 @@ os.remove('interim2.csv')
 os.remove('stats_out.csv')
 os.remove('969_out.csv')
 os.remove('CallNos_out.csv')
+os.remove('print_out.csv')
+os.remove('elec_out.csv')
