@@ -3,7 +3,7 @@
 # Statistics for Cataloging/Metadata Department (run monthly)
 # Statistics for Cataloging/Metadata department (run monthly)
 # Uses data from an OLE Report (item records and bib data)
-# Jesse A Lambertson lambertson@uchicago.edu
+# Jesse A Lambertson jessel@phantomlandscapes.com
 
 
 
@@ -12,6 +12,7 @@ exec(open('item_stats.py').read())
 exec(open('969_stats.py').read())
 exec(open('print.py').read())
 exec(open('electronic.py').read())
+exec(open('wlaw.py').read())
 exec(open('stats_wb.py').read())
 print('Workbook for the month created')
 exec(open('osRemove.py').read())

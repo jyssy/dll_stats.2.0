@@ -9,6 +9,7 @@ ws2 = wb.create_sheet('969 Stats', 1)
 ws3 = wb.create_sheet('CallNos', 2)
 ws4 = wb.create_sheet('Print', 3)
 ws5 = wb.create_sheet('Electronic', 4)
+ws6 = wb.create_sheet('WLAW', 5)
 
 items = pd.read_csv('stats_out.csv', header=None)  #  the actual item-count statistics for each cataloger
 items = dataframe_to_rows(items)
@@ -32,11 +33,16 @@ gen_print = dataframe_to_rows(gen_print)
 for r_idx, row in enumerate(gen_print, 1):
     for c_idx, value in enumerate(row, 1):
          ws4.cell(row=r_idx, column=c_idx, value=value)
-gen_elec = pd.read_csv('elec_out.csv', header=None)  #  General Print Statistics original/copy
+gen_elec = pd.read_csv('elec_out.csv', header=None)  #  General Electronic Statistics original/copy
 gen_elec = dataframe_to_rows(gen_elec)
 for r_idx, row in enumerate(gen_elec, 1):
     for c_idx, value in enumerate(row, 1):
          ws5.cell(row=r_idx, column=c_idx, value=value)
+wlaw = pd.read_csv('wlaw_out.csv', header=None)  #  General Electronic Statistics original/copy
+wlaw = dataframe_to_rows(wlaw)
+for r_idx, row in enumerate(wlaw, 1):
+    for c_idx, value in enumerate(row, 1):
+         ws6.cell(row=r_idx, column=c_idx, value=value)
 
 syear = input('What year is it? ')
 smonth = input('What month is it? ')
