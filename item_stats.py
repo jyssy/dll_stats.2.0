@@ -17,7 +17,7 @@ dataList.insert(0, 'iniCOD')
 # make the list object into a set object
 dataSet=set(dataList)
 
-team = dict(jal='Jesse Lambertson ', psm='Pat Sayre-McCoy ', mcd='Melanie Dial ', den='Daryl Nelson ', jrs='Julie Stauffer ', naa='Nissy ', dmd='Dora Davis ', ini='Initial_header ')
+team = dict(jal='Jesse Lambertson ', psm='Pat Sayre-McCoy ', mcd='Melanie Dial ', den='Daryl Nelson ', jrs='Julie Stauffer ', naa='Nissy ', dmd='Dora Davis ', skr='SKR person', ini='Initial_header ')
 codes = dict(PMO=' Print Monograph Original ', PML=' Print Monograph LC Copy ', PMC=' Print Monograph OCLC Copy ', COD=' Code_header ',
                  PMR=' Print Monograph OCLC Copy Revised ', PMB=' Print Monograph Rare Book cataloging ', PPC=' Print PCC Original ',
                  PPU=' Print PCC Upgrade ', PSO=' Print Serial Original ',
